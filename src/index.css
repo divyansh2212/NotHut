@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -24,16 +24,29 @@ body{
 }
 
 .header_img {
-  height: 10vh;
+  height: 8.5vh;
+  width: 10vh;
   margin: 1vh 2vw;
   position: absolute;
+}
+
+@media (max-width:250px) {
+  .header_img {
+    visibility: hidden;
+  }
+}
+
+@media (max-height:350px) {
+  .header_img {
+    height: 8vh;
+  }
 }
 
 .header h1 {
   width: 100%;
   margin: auto;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .add_note {
@@ -101,7 +114,6 @@ body{
   flex-direction: column;
 }
 
-
 .notes p {
   margin: 0.8rem;
   display: inline-block;
@@ -143,7 +155,7 @@ body{
   -webkit-box-shadow: 4px 3px 8px 1px #969696;
 }
 
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
 }
